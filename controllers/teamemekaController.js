@@ -1,5 +1,13 @@
 var models = require('../models/index');
 
+//create GET for users
+
+exports.create_get = function (req, res) {
+	 // create user GET controller logic here 
+	 res.render('/user_form', { title: 'Create User',  layout: 'layout'});
+};
+
+//create POST for users
 exports.create_post = function (req, res) {
 	models.User.create({
 		username: req.body.username
