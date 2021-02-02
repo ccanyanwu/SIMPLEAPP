@@ -8,7 +8,7 @@ var teamemeka_controller = require('../controllers/teamemekaController');
 /// TEAMEMEKA ROUTES ///
 
 // https://6bd9bf9ce60b47a6aa8de56ca048a9a5.vfs.cloud9.us-east-1.amazonaws.com/create
-router.gett('/create', teamemeka_controller.create_get);
+router.get('/create', teamemeka_controller.create_get);
 
 // https://6bd9bf9ce60b47a6aa8de56ca048a9a5.vfs.cloud9.us-east-1.amazonaws.com/create
 router.post('/create', teamemeka_controller.create_post); 
