@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users  = require('./routes/users');
 var timesheets  = require('./routes/timesheets');
 var teamjides  = require('./routes/teamjides');
-
+var teamemekas  = require('./routes/teamemekas');
 var app = express();
 
 // view engine setup
@@ -28,6 +28,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/timesheets', timesheets);
 app.use('/teamjides', teamjides);
+app.use('/teamemekas', teamemekas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
