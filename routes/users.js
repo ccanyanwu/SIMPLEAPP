@@ -31,6 +31,12 @@ router.post('/:user_id/teamjides/create', user_controller.create_teamjide_post);
 // https://6bd9bf9ce60b47a6aa8de56ca048a9a5.vfs.cloud9.us-east-1.amazonaws.com/:user_id/tasks/:teamjide_id/destroy
 router.get('/:user_id/teamjides/:teamjide_id/destroy', user_controller.delete_user_teamjide_get);
 
+// https://6bd9bf9ce60b47a6aa8de56ca048a9a5.vfs.cloud9.us-east-1.amazonaws.com/:user_id/teamemekas/create
+router.post('/:user_id/teamemekas/create', user_controller.create_teamemeka_post);
+
+// https://6bd9bf9ce60b47a6aa8de56ca048a9a5.vfs.cloud9.us-east-1.amazonaws.com/:user_id/tasks/:teamemeka_id/destroy
+router.get('/:user_id/teamemekas/:teamemeka_id/destroy', user_controller.delete_user_teamemeka_get);
+
 
 
 module.exports = router;

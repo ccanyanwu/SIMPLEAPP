@@ -77,3 +77,23 @@ exports.delete_user_teamjide_get = function (req, res) {
 		res.redirect('/');
 	});
 };
+
+exports.create_teamemeka_post = function (req, res) {
+	models.Teamemeka.create({
+		name: req.body.name,
+		UserId: req.params.user_id
+	}).then(function () {
+		res.redirect('/');
+	});
+
+};
+
+exports.delete_user_teamemeka_get = function (req, res) {
+	models.Teamemeka.destroy({
+		where: {
+			id: req.params.task_id
+		}
+	}).then(function () {
+		res.redirect('/');
+	});
+};
