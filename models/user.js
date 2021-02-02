@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     models.User.hasMany(models.Task);
     models.User.hasMany(models.Timesheet);
     models.User.hasMany(models.Teamjide);
+    models.User.hasMany(models.Teamemeka);
   };
 
   return User;
