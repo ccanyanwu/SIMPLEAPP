@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1= title
+
+  div(class="col-md-4")
+    h2 Create user
+
+    form(action="/users/create", method="post", class="well")
+      div(class="form-group")
+        label(for="username")
+          | Username
+        input(type="text", name="username", class="form-control")
+      input(type="submit" class="btn btn-default")
+
+  div(class="col-md-6")
+    h2 Users in Teamemeka
+
+    ul
+      each user in users
+        li
+          strong
+            = user.username
+          | &nbsp;
+          a(href="/users/" + user.id + "/destroy", class="btn btn-xs btn-warning") delete user
+          ul
+            li
+              | Create a teamemeka record
+              form(action="/users/" + user.id + "/teamemekas/create", method="post", class="form-inline")
+                div(class="form-group")
+                  input(type="text", name="name", class="input-sm form-control")
+                  input(type="submit", class="btn btn-sm btn-default")
+            each teamemeka in user.Teamemekas
+              li
+                strong
+                  = teamemeka.name
+                | &nbsp;
+                a(href="/users/" + user.id + "/teamemekas/" + teamemeka.id + "/destroy",  class="btn btn-xs btn-warning") delete 
+  
