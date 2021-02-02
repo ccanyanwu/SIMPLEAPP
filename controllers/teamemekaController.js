@@ -4,7 +4,7 @@ var models = require('../models/index');
 
 exports.create_get = function (req, res) {
 	 // create user GET controller logic here 
-	 res.render('/user_form');
+	 res.render('/pages/user_form');
 };
 
 //create POST for users
