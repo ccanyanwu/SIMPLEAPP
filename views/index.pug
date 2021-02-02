@@ -14,7 +14,7 @@ block content
       input(type="submit" class="btn btn-default")
 
   div(class="col-md-6")
-    h2 Users in Teamjide
+    h2 Users in Teamemeka
 
     ul
       each user in users
@@ -25,15 +25,15 @@ block content
           a(href="/users/" + user.id + "/destroy", class="btn btn-xs btn-warning") delete user
           ul
             li
-              | Create a teamemeks record
+              | Create a teamemekas record
               form(action="/users/" + user.id + "/teamemekas/create", method="post", class="form-inline")
                 div(class="form-group")
                   input(type="text", name="name", class="input-sm form-control")
                   input(type="submit", class="btn btn-sm btn-default")
-            each teamjide in user.Teamjides
+            each teamemeka in user.Teamemekas
               li
                 strong
-                  = teamjide.name
+                  = teamemeka.name
                 | &nbsp;
-                a(href="/users/" + user.id + "/teamjides/" + teamjide.id + "/destroy",  class="btn btn-xs btn-warning") delete 
+                a(href="/users/" + user.id + "/teamemekas/" + teamemeka.id + "/destroy",  class="btn btn-xs btn-warning") delete 
   
